@@ -1,0 +1,37 @@
+/* Current font */
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  min-height: 100vh; /* Ensure body takes full height */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapper fills viewport */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Content-wrapper grows to fill space between header and footer */
+.content-wrapper {
+  flex: 1 0 auto; /* Grow to fill available space */
+  padding: 1rem; /* Optional padding */
+  background-color: #f4f6f9; /* Optional AdminLTE background */
+}
+
+/* Footer sticks to the bottom */
+.main-footer {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  background-color: #fff;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Optional: sidebar scroll */
+.sidebar {
+  height: 100%;
+  overflow-y: auto;
+}

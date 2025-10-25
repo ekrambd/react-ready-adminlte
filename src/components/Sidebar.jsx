@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Sidebar() {
   const [categoryOpen, setCategoryOpen] = useState(false);
-
+  const [riderOpen, setRiderOpen] = useState(false);
   return (
     <aside className="main-sidebar sidebar-dark-primary elevation-4">
       {/* Brand Logo */}
@@ -25,39 +25,45 @@ export default function Sidebar() {
               </NavLink>
             </li>
 
-            {/* Categories Dropdown */}
-            <li className={`nav-item ${categoryOpen ? "menu-open" : ""}`}>
+            
+
+
+            {/* Riders Dropdown */}
+            <li className={`nav-item ${riderOpen ? "menu-open" : ""}`}>
               <a
                 href="#"
                 className="nav-link"
-                onClick={() => setCategoryOpen(!categoryOpen)}
+                onClick={() => setRiderOpen(!riderOpen)}
               >
-                <i className="nav-icon fas fa-list"></i>
+                <i className="nav-icon fas fa-users"></i>
                 <p>
-                  Categories
+                  Riders
                   <i className="right fas fa-angle-left"></i>
                 </p>
               </a>
 
               <ul
                 className="nav nav-treeview"
-                style={{ display: categoryOpen ? "block" : "none" }}
+                style={{ display: riderOpen ? "block" : "none" }}
               >
                 <li className="nav-item">
-                  <Link to="/categories/add" className="nav-link">
+                  <Link to="/riders/add" className="nav-link">
                     <i className="far fa-circle nav-icon"></i>
-                    <p>Add Category</p>
+                    <p>Add Rider</p>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/categories" className="nav-link">
+                  <Link to="/riders" className="nav-link">
                     <i className="far fa-circle nav-icon"></i>
-                    <p>All Categories</p>
+                    <p>All Riders</p>
                   </Link>
                 </li>
               </ul>
             </li>
-            {/* End Categories Dropdown */}
+            {/* End Riders Dropdown */}
+
+            
+
           </ul>
         </nav>
       </div>

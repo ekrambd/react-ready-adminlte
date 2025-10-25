@@ -10,13 +10,15 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const baseURL = import.meta.env.VITE_API_BASE_URL;
+
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
       const response = await axios.post(
-        "http://13.232.229.171/api/v1/courier-agent-signin",
+        `${baseURL}/api/v1/courier-agent-signin`,
         {
           login,
           password

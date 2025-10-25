@@ -5,17 +5,20 @@ import { toast } from "react-toastify";
 export default function Navbar() {
   const navigate = useNavigate();
 
+  const baseURL = import.meta.env.VITE_API_BASE_URL;
+
   const handleLogout = async () => {
     try {
       const token = localStorage.getItem("token"); // store your token on login
       const response = await fetch(
-        "http://13.232.229.171/api/v1/courier-rider-signout",
+        `${baseURL}/api/v1/courier-rider-signout`,
         {
           method: "POST",
           headers: {
             "Accept": "application/json",
             "Authorization": `Bearer ${token}`,
           },
+          withCredentials: true,
         }
       );
 

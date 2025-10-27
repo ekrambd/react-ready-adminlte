@@ -6,6 +6,10 @@ import AllCategories from "./pages/AllCategory";
 import AddRider from "./pages/AddRider";
 import AllRider from "./pages/AllRider";
 import EditRider from "./pages/EditRider";
+import AllOrder from "./pages/AllOrder";
+import AllAgentOrder from "./pages/AllAgentOrder";
+import ViewOrder from "./pages/ViewOrder";
+import ChangePassword from "./pages/ChangePassword";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 export default function App() {
@@ -69,6 +73,44 @@ export default function App() {
           </ProtectedRoute>
         }
       />
+
+      <Route
+        path="/orders"
+        element={
+          <ProtectedRoute>
+            <AllOrder />
+          </ProtectedRoute>
+        }
+      />
+
+
+      <Route
+        path="/orders/view/:id"
+        element={
+          <ProtectedRoute>
+            <ViewOrder />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/agent/orders"
+        element={
+          <ProtectedRoute>
+            <AllAgentOrder />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/change/password"
+        element={
+          <ProtectedRoute>
+            <ChangePassword />
+          </ProtectedRoute>
+        }
+      />
+      
 
     </Routes>
 

@@ -27,6 +27,7 @@ export default function Navbar() {
       if (response.ok && data.status) {
         toast.success(data.message || "Logged out successfully");
         localStorage.removeItem("token");
+        localStorage.removeItem("user_id");
         navigate("/");
       } else {
         toast.error(data.message || "Logout failed");

@@ -30,6 +30,7 @@ export default function Login() {
       if (response.data.status) {
         toast.success(response.data.message);
         localStorage.setItem("token", response.data.token);
+        localStorage.setItem('user_id',response.data.user.id.toString());
         setTimeout(() => {
           navigate("/dashboard");
         }, 1000);

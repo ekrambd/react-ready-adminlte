@@ -26,7 +26,7 @@ export default function Layout({ onLogout }) {
       {/* Sidebar */}
       <aside className="main-sidebar sidebar-dark-primary elevation-4">
         <a href="#" className="brand-link text-center">
-          <span className="brand-text font-weight-light">AdminLTE React</span>
+          <span className="brand-text font-weight-light">Agent Panel</span>
         </a>
 
         <div className="sidebar">
